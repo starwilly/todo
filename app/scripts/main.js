@@ -2,6 +2,7 @@
 'use strict';
 
 require.config({
+    baseUrl: 'scripts',
     shim: {
         underscore: {
             exports: '_'
@@ -27,7 +28,10 @@ require.config({
 });
 
 require([
-    'backbone'
-], function (Backbone) {
+    'backbone',
+    'app'
+], function (Backbone, App) {
     Backbone.history.start();
+    window.bTask = new App();
+    $('.hero-unit').css('background-color', 'red');
 });
