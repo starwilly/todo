@@ -32,6 +32,5 @@ require([
     'app'
 ], function (Backbone, App) {
     Backbone.history.start();
-    window.bTask = new App();
-    $('.hero-unit').css('background-color', 'red');
+    window.todoApp = new App();
 });
